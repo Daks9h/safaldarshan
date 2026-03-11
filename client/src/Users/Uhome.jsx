@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Unavbar from './Unavbar';
-import Footer from '../components/Footer';
+import Footer from '../Components/Footer';
 import './user-shared.css';
 import './Uhome.css';
 

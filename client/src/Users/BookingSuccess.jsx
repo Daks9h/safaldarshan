@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import Unavbar from './Unavbar';
-import Footer from '../components/Footer';
+import Footer from '../Components/Footer';
 import './BookingSuccess.css';
 
 const BookingSuccess = () => {

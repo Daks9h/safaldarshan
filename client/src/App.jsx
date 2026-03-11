@@ -5,7 +5,7 @@ import './organizer.css';
 import './user.css';
 
 // Auth Component
-import AuthPage from './components/AuthPage';
+import AuthPage from './Components/AuthPage';
 
 // Organizer Components
 import Ohome from './Organizer/Ohome';
@@ -24,7 +24,7 @@ import BookDarshan from './Users/BookDarshan';
 import Mybookings from './Users/Mybookings';
 
 // Utils
-import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRoute from './Components/ProtectedRoute';
 
 // New Components
 import BookingSuccess from './Users/BookingSuccess';

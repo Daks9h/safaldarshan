@@ -1,7 +1,7 @@
 /* src/Users/Uprofile.jsx */
 import React, { useState, useEffect } from 'react';
 import Unavbar from './Unavbar';
-import Footer from '../components/Footer';
+import Footer from '../Components/Footer';
 import './user-shared.css';
 import './Uprofile.css';
 
