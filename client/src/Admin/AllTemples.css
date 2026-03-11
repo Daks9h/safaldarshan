@@ -1,0 +1,386 @@
+/* src/Admin/AllTemples.css */
+.all-temples-page {
+    background-color: #F8FAFC;
+    min-height: 100vh;
+    padding-top: 70px;
+    box-sizing: border-box;
+}
+
+.temples-main {
+    padding: 2.5rem 5%;
+}
+
+.temples-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Summary Banner */
+.temples-summary-banner {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #FF6B00;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-text-group h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1A1A2E;
+    margin: 0 0 0.5rem 0;
+}
+
+.summary-text-group p {
+    color: #64748B;
+    font-weight: 500;
+    margin: 0;
+}
+
+.summary-status-grid {
+    display: flex;
+    gap: 3rem;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.s-val {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1E293B;
+    line-height: 1;
+}
+
+.summary-item.accent .s-val {
+    color: #FF6B00;
+}
+
+.s-lab {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #94A3B8;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* Controls Card */
+.temples-controls-card {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.search-group-admin {
+    flex: 1;
+    position: relative;
+    max-width: 600px;
+}
+
+.sc-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94A3B8;
+}
+
+.search-group-admin input {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 45px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    background: #F8FAFC;
+    transition: all 0.3s ease;
+}
+
+.search-group-admin input:focus {
+    outline: none;
+    border-color: #FF6B00;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.1);
+}
+
+.filter-group-admin {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter-group-admin label {
+    font-weight: 700;
+    color: #1E293B;
+    font-size: 0.9rem;
+}
+
+.filter-group-admin select {
+    padding: 0.85rem 2.5rem 0.85rem 1rem;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 0.75rem;
+    background: #F8FAFC;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Temple Grid & Cards */
+.temples-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.temple-admin-card {
+    background: white;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #FF6B00;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.temple-admin-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(255, 107, 0, 0.05);
+}
+
+.t-card-img {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.t-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.temple-admin-card:hover .t-card-img img {
+    transform: scale(1.1);
+}
+
+.t-status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.t-status-badge.active { background: #43A047; color: white; }
+.t-status-badge.inactive { background: #E53935; color: white; }
+
+.t-card-content {
+    padding: 1.75rem;
+}
+
+.t-header-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.4rem;
+    color: #1A1A2E;
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.t-location {
+    color: #64748B;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.t-meta-details {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid #F1F5F9;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.t-meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.m-label { color: #94A3B8; font-weight: 600; }
+.m-val { color: #1E293B; font-weight: 700; }
+.saffron-text { color: #FF6B00 !important; }
+
+.t-card-actions {
+    margin-top: 1.5rem;
+}
+
+.btn-toggle-status {
+    width: 100%;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.btn-toggle-status.deactivate { background: #E53935; }
+.btn-toggle-status.deactivate:hover { background: #C62828; }
+
+.btn-toggle-status.activate { background: #43A047; }
+.btn-toggle-status.activate:hover { background: #2E7D32; }
+
+/* Modal Styling */
+.admin-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.admin-modal-box {
+    background: white;
+    width: 90%;
+    max-width: 450px;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    animation: modalPopUp 0.3s ease-out;
+}
+
+.modal-icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.modal-icon-circle.red { background: #FEE2E2; color: #EF4444; }
+.modal-icon-circle.green { background: #DCFCE7; color: #10B981; }
+
+.admin-modal-box h3 {
+    margin: 0 0 1rem 0;
+    color: #1E293B;
+}
+
+.modal-text {
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.modal-warning {
+    background: #FFFBEB;
+    color: #92400E;
+    padding: 0.85rem;
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.modal-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-m-cancel {
+    flex: 1;
+    padding: 0.85rem;
+    background: #F1F5F9;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-m-confirm {
+    flex: 1;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 0.75rem;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-m-confirm.red { background: #E53935; }
+.btn-m-confirm.green { background: #43A047; }
+
+@keyframes modalPopUp { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* Loader & Empty State */
+.admin-loading-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8rem;
+    color: #64748B;
+}
+
+.admin-spinner-saffron {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #F1F5F9;
+    border-top: 5px solid #FF6B00;
+    border-radius: 50%;
+    animation: spinAdmin 1s linear infinite;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes spinAdmin { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+
+.temples-empty-state {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: white;
+    border-radius: 1.5rem;
+}
+
+.empty-img { font-size: 4rem; opacity: 0.3; margin-bottom: 1rem; }
+
+/* Responsive Adaptations */
+@media (max-width: 1200px) {
+    .temples-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .temples-summary-banner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .temples-controls-card { flex-direction: column; align-items: stretch; gap: 1.5rem; }
+}
+
+@media (max-width: 650px) {
+    .temples-grid { grid-template-columns: 1fr; }
+    .summary-status-grid { width: 100%; justify-content: space-between; gap: 0; }
+    .s-val { font-size: 2rem; }
+}

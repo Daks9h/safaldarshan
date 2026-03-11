@@ -1,0 +1,239 @@
+/* ======================================================
+   user-shared.css  —  shared base for ALL user pages
+   ====================================================== */
+
+/* Page Shell — consistent with Organizer section */
+.u-page {
+  min-height: 100vh;
+  background: #fff9f2;
+}
+.u-main {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 100px 2rem 60px;
+}
+
+/* Page Header */
+.u-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid #f0e8df;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.u-page-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 0.25rem;
+}
+.u-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Breadcrumb / back nav */
+.u-page-top-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.u-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #FF6B00;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border: 1.5px solid #FF6B00;
+  border-radius: 0.4rem;
+  transition: background 0.15s;
+}
+.u-back-btn:hover { background: #fff7ed; }
+
+.u-breadcrumb { color: #9ca3af; font-size: 0.9rem; }
+.u-breadcrumb::before { content: '/ '; }
+
+/* Section */
+.u-section { margin-top: 2.5rem; }
+.u-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid #f0e8df;
+}
+
+/* Flat list rows */
+.u-list { display: flex; flex-direction: column; }
+.u-list-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1.5px solid #f0e8df;
+  transition: background 0.15s;
+}
+.u-list-row:hover { background: #fffaf6; }
+.u-list-thumb {
+  width: 120px;
+  min-width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  background: #f3f4f6;
+}
+.u-list-info { flex: 1; }
+.u-list-info h3 { font-size: 1.05rem; font-weight: 700; color: #111827; margin: 0 0 0.25rem; }
+.u-list-info p { font-size: 0.875rem; color: #6b7280; margin: 0.1rem 0; }
+.u-list-price { font-weight: 700; color: #FF6B00; font-size: 0.95rem; margin-top: 0.3rem; }
+
+/* Action buttons */
+.u-btn-primary {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  background: #FF6B00;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.u-btn-primary:hover { background: #e66000; }
+
+.u-btn-outline {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  background: transparent;
+  color: #FF6B00;
+  border: 1.5px solid #FF6B00;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.u-btn-outline:hover { background: #fff7ed; }
+
+/* Status badges */
+.u-status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.u-status-badge.confirmed { background: #d1fae5; color: #065f46; }
+.u-status-badge.cancelled { background: #fee2e2; color: #991b1b; }
+.u-status-badge.pending { background: #fef3c7; color: #92400e; }
+
+/* Empty & loading states */
+.u-empty { text-align: center; padding: 5rem 2rem; color: #6b7280; }
+.u-empty h3 { color: #374151; margin-bottom: 0.5rem; }
+.u-loading { text-align: center; padding: 4rem; color: #FF6B00; font-weight: 600; }
+
+/* Stats band */
+.u-stats-band {
+  display: flex;
+  border: 1.5px solid #f0e8df;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  background: #fff;
+}
+.u-stat-item {
+  flex: 1;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  border-right: 1.5px solid #f0e8df;
+}
+.u-stat-item:last-child { border-right: none; }
+.u-stat-value { font-size: 2rem; font-weight: 800; color: #FF6B00; }
+.u-stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+/* Temple grid for browsing (Temples.jsx) */
+.u-temples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.u-temple-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1.5px solid #f0e8df;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.u-temple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255,107,0,0.1);
+}
+.u-temple-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #f3f4f6;
+}
+.u-temple-body { padding: 1.25rem; }
+.u-temple-body h3 { font-size: 1rem; font-weight: 700; color: #111827; margin: 0 0 0.35rem; }
+.u-temple-body p { font-size: 0.875rem; color: #6b7280; margin: 0.15rem 0; }
+
+/* Filter row */
+.u-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5px solid #f0e8df;
+  align-items: flex-end;
+}
+.u-filter-group { display: flex; flex-direction: column; gap: 0.4rem; min-width: 160px; }
+.u-filter-group label { font-size: 0.8rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+.u-filter-group input,
+.u-filter-group select {
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.u-filter-group input:focus,
+.u-filter-group select:focus { border-color: #FF6B00; }
+
+@media (max-width: 768px) {
+  .u-main { padding: 90px 1rem 40px; }
+  .u-stats-band { flex-direction: column; }
+  .u-stat-item { border-right: none; border-bottom: 1.5px solid #f0e8df; }
+  .u-list-row { flex-direction: column; align-items: flex-start; }
+  .u-list-thumb { width: 100%; height: 160px; }
+  .u-temples-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .u-temples-grid { grid-template-columns: 1fr; }
+}

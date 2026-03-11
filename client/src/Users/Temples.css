@@ -1,0 +1,221 @@
+/* src/Users/Temples.css */
+.temples-page {
+  min-height: calc(100vh - 70px);
+  background-color: #fffaf5; /* Soft cream/off-white background */
+  padding: 2rem 5%;
+}
+
+/* Search and Filter Bar */
+.temples-filter-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.filter-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.filter-input-group input,
+.filter-input-group select {
+  padding: 0.75rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-input-group input:focus,
+.filter-input-group select:focus {
+  border-color: #FF6B00;
+}
+
+.price-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.price-inputs input {
+  width: 100%;
+}
+
+/* Temple Grid */
+.temples-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.user-temple-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #FF6B00;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-temple-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.user-temple-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: #f3f4f6;
+}
+
+.user-temple-card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.user-temple-card-body h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.25rem;
+}
+
+.user-temple-location {
+  color: #6b7280;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.user-temple-desc {
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0.25rem 0;
+}
+
+.user-temple-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.user-price-label {
+  font-weight: 700;
+  color: #FF6B00;
+  font-size: 1.1rem;
+}
+
+.user-pooja-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.u-pooja-pill {
+  background-color: #FF6B00;
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.view-book-btn {
+  background-color: #FF6B00;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+.view-book-btn:hover {
+  background-color: #e66000;
+}
+
+/* Loading and Empty State */
+.loading-indicator,
+.empty-results {
+  text-align: center;
+  padding: 5rem 0;
+  width: 100%;
+}
+
+.loading-indicator {
+  color: #FF6B00;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.empty-results h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.empty-results p {
+  color: #6b7280;
+}
+
+.saffron-suggestion {
+  color: #FF6B00;
+  font-weight: 600;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .temples-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .temples-filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 640px) {
+  .temples-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .temples-page {
+    padding: 1.5rem 1rem;
+  }
+}

@@ -1,0 +1,447 @@
+/* src/Users/Uhome.css */
+.uhome-page {
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 90vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('../assets/banana_temple.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-top: 70px; /* Navbar height */
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem; /* Centered with bottom margin */
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.cta-button {
+  background-color: #FF6B00;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.cta-button:hover {
+  background-color: #e66000;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+}
+
+/* Features Section */
+.features-section {
+  padding: 5rem 10%;
+  background-color: #fffaf5;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #FF6B00;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.feature-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Featured Temples Section */
+.featured-temples-section {
+  padding: 5rem 10%;
+  background-color: #ffffff;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  border-left: 5px solid #FF6B00;
+  padding-left: 15px;
+}
+
+.temples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.u-temple-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f3f4f6;
+}
+
+.u-temple-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.u-temple-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.u-temple-info {
+  padding: 1.5rem;
+}
+
+.u-temple-info h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.u-temple-info p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.u-temple-price {
+  font-weight: 700;
+  color: #FF6B00;
+  font-size: 1.1rem;
+}
+
+.book-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #FF6B00;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.book-btn:hover {
+  background-color: #e66000;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  padding: 5rem 10%;
+  background: linear-gradient(135deg, #fff7ed 0%, #fffaf5 100%);
+  text-align: center;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.step-item {
+  flex: 1;
+  position: relative;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background-color: #FF6B00;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+}
+
+.step-item h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.step-item p {
+  color: #6b7280;
+}
+
+/* Partner Section */
+.partner-section {
+  padding: 8rem 10%;
+  background: linear-gradient(to right, #f8fafc, #eff6ff);
+  border-top: 1px solid #e2e8f0;
+  width: 100%;
+}
+
+.partner-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.partner-content {
+  flex: 1;
+}
+
+.partner-badge {
+  background: rgba(30, 58, 138, 0.1);
+  color: #1e3a8a;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.partner-content h2 {
+  font-size: 2.8rem;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.partner-content p {
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.partner-btns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn-partner-solid {
+  background: #1e3a8a;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-partner-outline {
+  padding: 1rem 2rem;
+  border: 1.5px solid #1e3a8a;
+  color: #1e3a8a;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-partner-solid:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(30, 58, 138, 0.15);
+}
+
+.btn-partner-outline:hover {
+  background: rgba(30, 58, 138, 0.05);
+}
+
+.partner-image {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.abstract-ui-preview {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+}
+
+.preview-card {
+  background: white;
+  width: 80%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.preview-header {
+  background: #f1f5f9;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.preview-body {
+  padding: 1rem;
+}
+
+.preview-line {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.preview-line.short {
+  width: 60%;
+}
+
+.preview-bars {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  align-items: flex-end;
+  height: 60px;
+}
+
+.bar {
+  width: 20%;
+  background: #cbd5e1;
+  border-radius: 4px 4px 0 0;
+  height: 40%;
+}
+
+.bar.pulse {
+  background: #FF6B00;
+  height: 80%;
+  animation: barPulse 2s infinite ease-in-out;
+}
+
+@keyframes barPulse {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(1.1); }
+  100% { transform: scaleY(1); }
+}
+
+@media (max-width: 1000px) {
+  .partner-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .partner-btns {
+    justify-content: center;
+  }
+  
+  .partner-image {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .features-grid, .steps-container {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .temples-grid {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    gap: 1.5rem;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .u-temple-card {
+    min-width: 280px;
+    scroll-snap-align: start;
+  }
+}

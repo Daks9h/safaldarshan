@@ -1,0 +1,253 @@
+/* src/Users/BookDarshan.css */
+.book-darshan-page {
+  min-height: calc(100vh - 70px);
+  background-color: #fffaf5;
+  padding: 3rem 5%;
+}
+
+.book-darshan-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* 40% - 60% approximately */
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Booking Summary Section */
+.booking-summary-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid #FF6B00;
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.summary-thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.summary-temple-info h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.summary-temple-info p {
+  margin: 0.25rem 0 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.booking-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.detail-row .label {
+  font-weight: 500;
+}
+
+.detail-row .value {
+  font-weight: 700;
+  color: #111827;
+  text-align: right;
+}
+
+.total-amount-row {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-amount-label {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.total-amount-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #FF6B00;
+}
+
+/* Devotee Form Section */
+.devotee-form-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #FF6B00;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Action Buttons */
+.booking-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.confirm-pay-btn {
+  background-color: #FF6B00;
+  color: white;
+  border: none;
+  padding: 1.1rem;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirm-pay-btn:hover:not(:disabled) {
+  background-color: #e66000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+}
+
+.confirm-pay-btn:disabled {
+  background-color: #fca5a5;
+  cursor: not-allowed;
+}
+
+.cancel-booking-btn {
+  background-color: transparent;
+  color: #FF6B00;
+  border: 2px solid #FF6B00;
+  padding: 0.9rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.cancel-booking-btn:hover {
+  background-color: #fff7ed;
+}
+
+.error-msg {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Loading State */
+.booking-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: #FF6B00;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .book-darshan-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .full-width {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .book-darshan-page {
+    padding: 1.5rem 1rem;
+  }
+  
+  .devotee-form-card, .booking-summary-card {
+    padding: 1.5rem;
+  }
+}

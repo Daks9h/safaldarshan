@@ -1,0 +1,209 @@
+.edit-temple-page {
+  min-height: 100vh;
+  background-color: #fff9f2;
+  padding: 2rem 1rem;
+}
+
+.edit-form-container {
+  background: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.edit-form-container h2 {
+  color: #FF6B00;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.edit-temple-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.form-field input, 
+.form-field textarea {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.form-field input:focus, 
+.form-field textarea:focus {
+  outline: none;
+  border-color: #FF6B00;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Image Preview */
+.image-upload-section {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+
+.current-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  border: 2px solid #fff7ed;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.file-input-container {
+  flex: 1;
+}
+
+.file-input-wrapper {
+  border: 1.5px dashed #d1d5db;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  font-size: 0.9rem;
+}
+
+.file-input-wrapper:hover {
+  border-color: #FF6B00;
+}
+
+/* Dynamic List */
+.dynamic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dynamic-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.dynamic-item input {
+  flex: 1;
+}
+
+.remove-btn {
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.add-btn {
+  background: #fff7ed;
+  color: #FF6B00;
+  border: 1.5px dashed #FF6B00;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Buttons */
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.update-btn {
+  background-color: #FF6B00;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.update-btn:hover:not(:disabled) {
+  background-color: #e66000;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  color: #FF6B00;
+  border: 2px solid #FF6B00;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cancel-btn:hover {
+  background-color: #fff7ed;
+}
+
+.loading-overlay {
+  text-align: center;
+  padding: 4rem;
+  color: #FF6B00;
+  font-weight: 600;
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .edit-form-container {
+    padding: 1.5rem;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .image-upload-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-group {
+    grid-template-columns: 1fr;
+  }
+}

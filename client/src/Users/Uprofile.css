@@ -1,0 +1,190 @@
+/* src/Users/Uprofile.css */
+.profile-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.profile-container {
+  padding: 120px 5% 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-wrapper {
+  width: 100%;
+  max-width: 800px;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.avatar-large {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #FF6B00 0%, #e66000 100%);
+  color: white;
+  border-radius: 50%;
+  font-size: 3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+}
+
+.profile-header h2 {
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.profile-header p {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 1.5rem;
+}
+
+.card-header h3 {
+  color: #1e3a8a;
+  font-size: 1.25rem;
+}
+
+.btn-edit-trigger {
+  background: rgba(255, 107, 0, 0.1);
+  color: #FF6B00;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-edit-trigger:hover {
+  background: #FF6B00;
+  color: white;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group-profile label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.form-group-profile input {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: all 0.3s;
+}
+
+.form-group-profile input:focus:not(:disabled) {
+  outline: none;
+  border-color: #FF6B00;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.1);
+}
+
+.form-group-profile input:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+  border-style: dashed;
+}
+
+.form-row-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.input-hint {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+.notification-pill {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.notification-pill.success {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.form-actions-profile {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-cancel-profile {
+  background: #f1f5f9;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.75rem;
+  color: #64748b;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-save-profile {
+  background: #FF6B00;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-save-profile:hover {
+  background: #e66000;
+  box-shadow: 0 10px 15px rgba(255, 107, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .form-row-profile {
+    grid-template-columns: 1fr;
+  }
+}

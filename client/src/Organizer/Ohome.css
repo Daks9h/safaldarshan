@@ -1,0 +1,134 @@
+/* Ohome — full-width spread dashboard (no stat cards) */
+.dashboard-container {
+  padding: 100px 2.5rem 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.welcome-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid #f0e8df;
+  padding-bottom: 1.5rem;
+}
+
+.welcome-header h1 {
+  color: #FF6B00;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.welcome-header p {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* STATS: replaced floating cards with a flat horizontal band */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  border: 1.5px solid #f0e8df;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-right: 1.5px solid #f0e8df;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.stat-card:last-child {
+  border-right: none;
+}
+
+.stat-card h3 {
+  color: #9ca3af;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.stat-card p {
+  color: #FF6B00;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* QUICK ACTIONS: full-width rows, no floating boxes */
+.quick-actions-section {
+  margin-top: 1rem;
+}
+
+.quick-actions-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Actions: flat borderless blocks */
+.action-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid #f0e8df;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+  box-shadow: none;
+}
+
+.action-card:hover {
+  border-color: #FF6B00;
+  transform: translateY(-3px);
+}
+
+.action-card i {
+  font-size: 1.5rem;
+  color: #FF6B00;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.action-card span {
+  font-weight: 700;
+  color: #111827;
+  font-size: 1rem;
+}
+
+.action-card p {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 90px 1rem 40px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stat-card {
+    border-bottom: 1.5px solid #f0e8df;
+  }
+}
