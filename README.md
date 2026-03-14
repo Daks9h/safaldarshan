@@ -73,12 +73,6 @@ We built this platform to ensure that your energy is spent on **Bhakti**, not on
    ```bash
    npm run dev
    ```
-
----
-
-## 📸 Screenshots
-*(Add your project screenshots here to make it 10/10!)*
-
 ---
 
 ## 🤝 Contributing
